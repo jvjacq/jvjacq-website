@@ -1,62 +1,48 @@
-// Grab elements
-const selectElement = (selector) => {
-    const element = document.querySelector(selector);
-    if(element) return element;
-    throw new Error(`Something went wrong! Make sure that ${selector} exists/is typed correctly.`);  
-};
+// Theme - apply before paint to prevent flash
+(function () {
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  document.documentElement.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+})();
 
-// Nav styles on scroll
-const scrollHeader = () =>{
-    const navbarElement = selectElement('#header');
-    if(this.scrollY >= 15) {
-        navbarElement.classList.add('activated');
-    } else {
-        navbarElement.classList.remove('activated');
+document.addEventListener('DOMContentLoaded', () => {
+  const html    = document.documentElement;
+  const header  = document.getElementById('header');
+  const themeBtn = document.getElementById('theme-toggle');
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  // Mark active nav link
+  const page = location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-link, .mobile-link, .footer-link').forEach(link => {
+    const href = (link.getAttribute('href') || '').split('/').pop();
+    if (href === page || (page === '' && href === 'index.html')) {
+      link.classList.add('active');
     }
-}
+  });
 
-window.addEventListener('scroll', scrollHeader);
+  // Header on scroll
+  window.addEventListener('scroll', () => {
+    header?.classList.toggle('scrolled', window.scrollY > 16);
+  }, { passive: true });
 
-// Open menu
-const menuToggleIcon = selectElement('#menu-toggle-icon');
+  // Theme toggle
+  themeBtn?.addEventListener('click', () => {
+    const next = html.dataset.theme === 'dark' ? 'light' : 'dark';
+    html.dataset.theme = next;
+    localStorage.setItem('theme', next);
+  });
 
-const toggleMenu = () =>{
-    const mobileMenu = selectElement('#menu');
-    mobileMenu.classList.toggle('activated');
-    menuToggleIcon.classList.toggle('activated');
-}
+  // Mobile menu
+  menuToggle?.addEventListener('click', () => {
+    menuToggle.classList.toggle('open');
+    mobileMenu?.classList.toggle('open');
+  });
 
-menuToggleIcon.addEventListener('click', toggleMenu);
-
-// Switch theme/add to local storage
-const body = document.body;
-const themeToggleBtn = selectElement('#theme-toggle-btn');
-const currentTheme = localStorage.getItem('currentTheme');
-
-// Check to see if there is a theme preference in local Storage, if so add the ligt theme to the body
-if (currentTheme) {
-    body.classList.add('light-theme');
-}
-
-themeToggleBtn.addEventListener('click', function () {
-    // Add light theme on click
-    body.classList.toggle('light-theme');
-
-    // If the body has the class of light theme then add it to local Storage, if not remove it
-    if (body.classList.contains('light-theme')) {
-        localStorage.setItem('currentTheme', 'themeActive');
-    } else {
-        localStorage.removeItem('currentTheme');
-    }
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuToggle?.classList.remove('open');
+      mobileMenu?.classList.remove('open');
+    });
+  });
 });
-
-// Typewriter
-setTimeout(function() {
-    var line = "// I'm a creator and software engineer based in Cape Town.";
-    var character = line.split("");
-    var element = document.getElementById('home-text-three');
-    (function animate() {
-        character.length > 0 ? element.innerHTML += character.shift() : clearTimeout(running);
-        var running = setTimeout(animate, 40);
-    })();
-}, 5500);
