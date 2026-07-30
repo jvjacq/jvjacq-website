@@ -12,14 +12,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  // Mark active nav link
-  const page = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-link, .mobile-link, .footer-link').forEach(link => {
-    const href = (link.getAttribute('href') || '').split('/').pop();
-    if (href === page || (page === '' && href === 'index.html')) {
-      link.classList.add('active');
-    }
-  });
+  // Scroll-spy: mark the nav link for the section currently in view
+  const navLinks = [...document.querySelectorAll('.nav-link[href^="#"], .mobile-link[href^="#"]')];
+  const sections = navLinks
+    .map(l => document.getElementById(l.getAttribute('href').slice(1)))
+    .filter(Boolean);
+
+  if (sections.length) {
+    const setActive = id => navLinks.forEach(l =>
+      l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    sections.forEach(s => spy.observe(s));
+  }
 
   // Header on scroll
   window.addEventListener('scroll', () => {

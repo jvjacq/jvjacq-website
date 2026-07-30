@@ -2,12 +2,13 @@
 
 Source code for my personal website at [jvjacq.com](https://jvjacq.com). A clean, minimal portfolio site built from scratch with plain HTML, CSS, and JavaScript - no frameworks, no build step.
 
-## Pages
+## Structure
 
-- **Home** - intro, terminal widget, and selected work
+Single scrolling page (`index.html`) with anchor-nav sections:
+
+- **Hero** - intro and terminal widget
 - **About** - bio, background, and skills
-- **Work** - portfolio of projects and creative work
-- **Coaching** - training and nutrition coaching info
+- **Work** - Astraeus, GNOME extensions, and Weblio
 - **Contact** - links and a contact form
 
 ## Stack
