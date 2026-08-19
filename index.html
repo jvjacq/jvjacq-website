@@ -8,7 +8,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css">
   <script>
-    (function(){const s=localStorage.getItem('theme'),d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=s||(d?'dark':'light');})();
+    (function(){const s=localStorage.getItem('theme');document.documentElement.dataset.theme=s||'dark';})();
   </script>
 </head>
 <body>
@@ -53,7 +53,7 @@
           <div class="hero-text">
             <span class="hero-label">Cape Town, South Africa</span>
             <h1>Jacq van<br>Jaarsveld.</h1>
-            <p class="hero-sub">Athlete, engineer, and gamer from Cape Town. I build products and websites, make content, and tinker with open source.</p>
+            <p class="hero-sub">Athlete, engineer, and gamer from Cape Town. Building products and websites, making content, and tinkering with open source.</p>
             <div class="hero-actions">
               <a href="#work"    class="btn btn-primary">View my work</a>
               <a href="#contact" class="btn btn-ghost">Get in touch</a>
@@ -69,19 +69,19 @@
               </div>
               <div class="terminal-body">
                 <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> cat about.txt</p>
-                <p class="t-out">athlete · engineer · gamer</p>
+                <p class="t-out">Athlete | Engineer | Gamer</p>
                 <p class="t-out">Cape Town, South Africa</p>
                 <p class="t-out">BSc Computer Science &amp; Computer Engineering - UCT</p>
                 <br>
                 <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> cat motivation.txt</p>
                 <p class="t-out">lift heavy.</p>
                 <p class="t-out">run far.</p>
-                <p class="t-out">live limitless.</p>
+                <p class="t-out">break limits.</p>
                 <br>
-                <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> ls now/</p>
-                <p class="t-out t-dir">building_astraeus/</p>
-                <p class="t-out t-dir">building_weblio/</p>
-                <p class="t-out t-dir">publishing_gnome_extensions/</p>
+                <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> ls building/</p>
+                <p class="t-out t-dir">astraeus</p>
+                <p class="t-out t-dir">weblio</p>
+                <p class="t-out t-dir">gnome_extensions</p>
                 <br>
                 <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> <span class="t-cursor"></span></p>
               </div>
@@ -110,11 +110,8 @@
               <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="sidebar-link">
                 <i class="ri-github-fill"></i> GitHub
               </a>
-              <a href="https://www.linkedin.com/in/jacqvanjaarsveld/" target="_blank" rel="noopener" class="sidebar-link">
+              <a href="https://www.linkedin.com/in/jvjacq/" target="_blank" rel="noopener" class="sidebar-link">
                 <i class="ri-linkedin-fill"></i> LinkedIn
-              </a>
-              <a href="https://www.youtube.com/c/jvjacq" target="_blank" rel="noopener" class="sidebar-link">
-                <i class="ri-youtube-fill"></i> YouTube
               </a>
               <a href="mailto:jacqvanjaarsveld@gmail.com" class="sidebar-link">
                 <i class="ri-mail-fill"></i> jacqvanjaarsveld@gmail.com
@@ -127,18 +124,19 @@
 
             <div class="about-block">
               <h2>Who I am</h2>
-              <p>I'm Jacq van Jaarsveld - an athlete, engineer, and gamer born and raised in Cape Town, South Africa.</p>
-              <p>In my free time I'm either training, reading, watching anime, gaming, or hanging out with friends. I also really love coffee, art, and technology.</p>
+              <p>I'm Jacq van Jaarsveld, a Computer Scientist with a passion for solving complex problems and crafting meaningful solutions. Organised and meticulous by nature, I thrive in environments that encourage continuous learning and improvement.</p>
+              <p>Born and raised in Cape Town, South Africa. During my free time I'm either working out, gaming, reading, watching anime, or hanging out with friends.</p>
             </div>
 
             <div class="about-block">
               <h2>What I do</h2>
-              <p>I'm developing <strong>Astraeus</strong>, a personal accountability app, running my web design studio <strong>Weblio</strong>, and maintaining a family of open source <strong>GNOME Shell extensions</strong>. I also make content on YouTube. My background is in software engineering, but I've developed a strong interest in web design and the visual side of building things.</p>
+              <p>After earning my BSc in Computer Science and Computer Engineering from UCT, I started out as a Software Engineer building bespoke payment solutions in Java, Python, and SQL. I then explored data science, data engineering, and machine learning with Python, SQL, Docker, and AWS. Now I'm back in the payments industry as a software engineer in fintech, working across Linux, Docker, and the rest of the modern development stack.</p>
+              <p>Outside of my day job I've been getting deep into Linux and open source, building <strong>Astraeus</strong>, an all-in-one productivity app, working on <strong>Weblio</strong>, my web design studio, and publishing a family of <strong>GNOME Shell extensions</strong>. The more I build, the more the terminal feels like home. Maybe one day I'll use Arch (btw).</p>
             </div>
 
             <div class="about-block">
               <h2>A few things I can do</h2>
-              <p>Solve a Rubik's cube in under 20 seconds. Hold my breath for three and a half minutes. Recite fifty digits of pi. Throw coffee capsules into the coffee machine. Type relatively fast. Edit photos and videos. Code in quite a few languages.</p>
+              <p>Solve a Rubik's cube in under 20 seconds. Hold my breath for three minutes. Recite fifty digits of pi. Throw coffee capsules into the coffee machine. Type relatively fast. Edit photos and videos. Code in quite a few languages.</p>
             </div>
 
             <hr class="divider">
@@ -146,15 +144,15 @@
             <div class="about-block">
               <span class="skills-label">Development</span>
               <div class="chips">
-                <span class="chip">HTML &amp; CSS</span>
-                <span class="chip">JavaScript</span>
-                <span class="chip">Kotlin</span>
-                <span class="chip">Python</span>
                 <span class="chip">Java</span>
-                <span class="chip">C++</span>
+                <span class="chip">Python</span>
+                <span class="chip">Kotlin</span>
                 <span class="chip">SQL</span>
                 <span class="chip">Git</span>
+                <span class="chip">Docker</span>
                 <span class="chip">Linux</span>
+                <span class="chip">HTML &amp; CSS</span>
+                <span class="chip">JavaScript</span>
               </div>
             </div>
 
@@ -180,7 +178,7 @@
         <div class="section-header">
           <div>
             <span class="page-eyebrow">Work</span>
-            <h2>Things I've built &amp; created.</h2>
+            <h2>Things I'm building + creating.</h2>
           </div>
         </div>
 
@@ -195,13 +193,13 @@
             <div class="portfolio-body">
               <div class="portfolio-meta">
                 <div class="p-tags">
-                  <span class="tag">Desktop App</span>
+                  <span class="tag">Cross-platform App</span>
                   <span class="tag">Product Design</span>
                 </div>
                 <span class="p-year">2026</span>
               </div>
               <h3>Astraeus</h3>
-              <p>A personal accountability companion that comes to you: proactive check-ins at the right moment, a local-first Markdown vault you fully own, and one big mission above your daily goals. Time, Tasks, Thoughts, and Tracking in one place.</p>
+              <p>An all-in-one productivity app, allowing you to manage your tasks, calendar, notes, and habits - all in one place. Built around a local-first Markdown vault you fully own, with optional device sync and AI enhancement.</p>
               <span class="portfolio-link">Visit astraeus.app <i class="ri-arrow-right-line"></i></span>
             </div>
           </a>
@@ -241,7 +239,7 @@
                 <span class="p-year">2026</span>
               </div>
               <h3>Weblio</h3>
-              <p>My web design studio - helping businesses and creatives build modern, beautiful websites that actually convert.</p>
+              <p>My web design studio - helping businesses and professionals build modern, beautiful websites that they can be proud to share.</p>
               <span class="portfolio-link">Visit weblio.studio <i class="ri-arrow-right-line"></i></span>
             </div>
           </a>
@@ -254,7 +252,8 @@
             <div>
               <span class="page-eyebrow">Open Source</span>
               <h2>GNOME Shell Extensions</h2>
-              <p class="lead">Small, focused extensions for the GNOME desktop - each does one thing well. Built for GNOME 50 and published on extensions.gnome.org.</p>
+              <p class="lead">Mostly small and focused extensions for the GNOME desktop.
+              <br>Built for GNOME 50 and published on extensions.gnome.org.</p>
             </div>
             <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="portfolio-link">All repos on GitHub <i class="ri-arrow-right-line"></i></a>
           </div>
@@ -262,7 +261,7 @@
           <div class="ext-list">
             <div class="ext-item">
               <h4>Show Apps Hot Corner</h4>
-              <p>Trigger the app grid by moving your cursor into a screen corner.</p>
+              <p>Trigger the app grid by moving your cursor into a hot corner.</p>
             </div>
             <div class="ext-item">
               <h4>Show Activities Overview Hot Corner</h4>
@@ -312,10 +311,6 @@
             <p>The best way to reach me is via email. You can also find me across most platforms below.</p>
 
             <div class="contact-links">
-              <a href="https://twitter.com/jvjacq" target="_blank" rel="noopener" class="contact-item">
-                <i class="ri-twitter-x-fill"></i>
-                <span>@jvjacq</span>
-              </a>
               <a href="https://www.instagram.com/jvjacq/" target="_blank" rel="noopener" class="contact-item">
                 <i class="ri-instagram-fill"></i>
                 <span>@jvjacq</span>
@@ -336,7 +331,7 @@
                 <i class="ri-github-fill"></i>
                 <span>jvjacq</span>
               </a>
-              <a href="https://www.linkedin.com/in/jacqvanjaarsveld/" target="_blank" rel="noopener" class="contact-item">
+              <a href="https://www.linkedin.com/in/jvjacq/" target="_blank" rel="noopener" class="contact-item">
                 <i class="ri-linkedin-fill"></i>
                 <span>jvjacq</span>
               </a>
@@ -363,11 +358,11 @@
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="What's it about?">
+                <input type="text" id="subject" name="subject" placeholder="What it's about">
               </div>
               <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="body" placeholder="Tell me what's on your mind..."></textarea>
+                <textarea id="message" name="body" placeholder="Your message here..."></textarea>
               </div>
               <div>
                 <button type="submit" class="btn btn-primary">Send message <i class="ri-send-plane-fill"></i></button>

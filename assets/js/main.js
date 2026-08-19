@@ -1,8 +1,7 @@
 // Theme - apply before paint to prevent flash
 (function () {
   const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  document.documentElement.dataset.theme = saved || (prefersDark ? 'dark' : 'light');
+  document.documentElement.dataset.theme = saved || 'dark';
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,27 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  // Scroll-spy: mark the nav link for the section currently in view
+  // Scroll-spy: mark the nav link for the section currently in view.
+  // Position-based so nothing is highlighted while still in the hero.
   const navLinks = [...document.querySelectorAll('.nav-link[href^="#"], .mobile-link[href^="#"]')];
-  const sections = navLinks
-    .map(l => document.getElementById(l.getAttribute('href').slice(1)))
+  const sections = [...new Set(navLinks.map(l => l.getAttribute('href')))]
+    .map(h => document.getElementById(h.slice(1)))
     .filter(Boolean);
 
-  if (sections.length) {
-    const setActive = id => navLinks.forEach(l =>
-      l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+  const setActive = id => navLinks.forEach(l =>
+    l.classList.toggle('active', id !== null && l.getAttribute('href') === '#' + id));
 
-    const spy = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) setActive(e.target.id); });
-    }, { rootMargin: '-45% 0px -50% 0px' });
+  const updateSpy = () => {
+    const line = window.scrollY + window.innerHeight * 0.35;
+    let current = null;
+    for (const s of sections) {
+      if (s.offsetTop <= line) current = s.id;
+    }
+    setActive(current);
+  };
 
-    sections.forEach(s => spy.observe(s));
-  }
-
-  // Header on scroll
+  // Combined scroll handler: header state + scroll-spy
   window.addEventListener('scroll', () => {
     header?.classList.toggle('scrolled', window.scrollY > 16);
+    if (sections.length) updateSpy();
   }, { passive: true });
+
+  if (sections.length) updateSpy();
 
   // Theme toggle
   themeBtn?.addEventListener('click', () => {
