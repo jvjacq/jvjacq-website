@@ -57,4 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
       mobileMenu?.classList.remove('open');
     });
   });
+
+  // Close the drawer if the viewport grows past the mobile breakpoint
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      menuToggle?.classList.remove('open');
+      mobileMenu?.classList.remove('open');
+    }
+  });
 });
