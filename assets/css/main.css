@@ -59,7 +59,7 @@ main { flex: 1; }
 /* ─── Layout ─────────────────────────────────────────────── */
 .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
 .section   { padding: 96px 0; }
-section[id] { scroll-margin-top: 72px; }
+section[id] { scroll-margin-top: 52px; }
 .section-alt { background: var(--bg-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
 /* ─── Buttons ────────────────────────────────────────────── */
@@ -535,7 +535,7 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin-top: 48px
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  padding: 48px 0 96px;
+  padding: 0 0 56px;
 }
 .portfolio-card {
   background: var(--bg-card);
