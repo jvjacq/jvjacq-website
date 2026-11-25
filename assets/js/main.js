@@ -1,7 +1,7 @@
 // Theme - apply before paint to prevent flash
 (function () {
   const saved = localStorage.getItem('theme');
-  document.documentElement.dataset.theme = saved || 'dark';
+  document.documentElement.dataset.theme = saved || 'light';
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
