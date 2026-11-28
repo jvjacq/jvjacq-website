@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page not found - Jacq van Jaarsveld</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="100x100" href="/assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>
+    (function () { var s = null; try { s = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = s || 'light'; })();
+  </script>
+</head>
+<body>
+
+  <!-- Served by Netlify for any address that doesn't exist, so every path here starts at the site root. -->
+  <header id="header">
+    <nav class="nav-inner container" aria-label="Main">
+      <a href="/" class="logo">jvjacq</a>
+      <div class="nav-links">
+        <a href="/#about" class="nav-link">about</a>
+        <a href="/#work" class="nav-link">work</a>
+        <a href="/#contact" class="nav-link">contact</a>
+      </div>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="text-btn" type="button" aria-label="Switch between light and dark mode">
+          <span class="when-light">[ dark ]</span><span class="when-dark">[ light ]</span>
+        </button>
+        <button id="menu-toggle" class="text-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">[ menu ]</button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="container">
+      <a href="/#about" class="mobile-link">about</a>
+      <a href="/#work" class="mobile-link">work</a>
+      <a href="/#contact" class="mobile-link">contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="whoami"><span>&gt;</span> cd /this-page</p>
+          <h1>404<span class="dot">.</span></h1>
+          <p class="typed">page not found.<span class="cursor" aria-hidden="true"></span></p>
+          <p class="hero-sub">This page ran off somewhere. Let's get you back on track.</p>
+          <div class="hero-links">
+            <a href="/" class="bracket"><span>[</span> back home <span>]</span></a>
+            <a href="/#contact" class="bracket"><span>[</span> get in touch <span>]</span></a>
+          </div>
+        </div>
+        <div class="hero-stage">
+          <p class="status"><b>status:</b> lost<br><b>location:</b> unknown</p>
+          <pre id="runner" aria-hidden="true"></pre>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="/" class="logo">jvjacq</a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="/#about">about</a>
+        <a href="/#work">work</a>
+        <a href="/#contact">contact</a>
+      </nav>
+      <span class="copyright">&copy; <span id="year">2026</span> Jacq van Jaarsveld</span>
+    </div>
+  </footer>
+
+  <script src="/assets/js/runner.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

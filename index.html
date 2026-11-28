@@ -4,43 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jacq van Jaarsveld</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon.png">
+  <meta name="description" content="Jacq van Jaarsveld - athlete, engineer and gamer from Cape Town. Building products and websites, and making content.">
+  <link rel="canonical" href="https://jvjacq.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jvjacq.com/">
+  <meta property="og:site_name" content="jvjacq">
+  <meta property="og:title" content="Jacq van Jaarsveld">
+  <meta property="og:description" content="Athlete, engineer and gamer from Cape Town. Building products and websites, and making content.">
+  <meta property="og:image" content="https://jvjacq.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jacq van Jaarsveld - lift heavy. run far. break limits.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Jacq van Jaarsveld">
+  <meta name="twitter:description" content="Athlete, engineer and gamer from Cape Town. Building products and websites, and making content.">
+  <meta name="twitter:image" content="https://jvjacq.com/assets/images/og-image.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="100x100" href="./assets/images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/main.css">
   <script>
-    (function(){const s=localStorage.getItem('theme');document.documentElement.dataset.theme=s||'light';})();
+    (function () { var s = null; try { s = localStorage.getItem('theme'); } catch (e) {} document.documentElement.dataset.theme = s || 'light'; })();
   </script>
 </head>
 <body>
 
   <header id="header">
-    <nav class="nav-inner container">
+    <nav class="nav-inner container" aria-label="Main">
       <a href="#top" class="logo">jvjacq</a>
-
       <div class="nav-links">
-        <a href="#about"   class="nav-link">About</a>
-        <span class="sep">/</span>
-        <a href="#work"    class="nav-link">Work</a>
-        <span class="sep">/</span>
-        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#about" class="nav-link">about</a>
+        <a href="#work" class="nav-link">work</a>
+        <a href="#contact" class="nav-link">contact</a>
       </div>
-
       <div class="nav-actions">
-        <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
-          <i class="ri-sun-line sun-icon"></i>
-          <i class="ri-moon-line moon-icon"></i>
+        <button id="theme-toggle" class="text-btn" type="button" aria-label="Switch between light and dark mode">
+          <span class="when-light">[ dark ]</span><span class="when-dark">[ light ]</span>
         </button>
-        <button id="menu-toggle" class="icon-btn" aria-label="Toggle menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
+        <button id="menu-toggle" class="text-btn" type="button" aria-expanded="false" aria-controls="mobile-menu">[ menu ]</button>
       </div>
     </nav>
     <div id="mobile-menu" class="container">
-      <a href="#about"   class="mobile-link">About</a>
-      <a href="#work"    class="mobile-link">Work</a>
-      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#about" class="mobile-link">about</a>
+      <a href="#work" class="mobile-link">work</a>
+      <a href="#contact" class="mobile-link">contact</a>
     </div>
   </header>
 
@@ -48,45 +58,20 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="container">
-        <div class="hero-inner">
-          <div class="hero-text">
-            <span class="hero-label">Cape Town, South Africa</span>
-            <h1>Jacq van<br>Jaarsveld.</h1>
-            <p class="hero-sub">Athlete, engineer, and gamer from Cape Town. Building products and websites, making content, and tinkering with open source.</p>
-            <div class="hero-actions">
-              <a href="#work"    class="btn btn-primary">View my work</a>
-              <a href="#contact" class="btn btn-ghost">Get in touch</a>
-            </div>
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="whoami"><span>&gt;</span> whoami</p>
+          <h1>Jacq van<br>Jaarsveld<span class="dot">.</span></h1>
+          <p class="typed" aria-label="lift heavy. run far. break limits."><span id="typed" aria-hidden="true">lift heavy.</span><span class="cursor" aria-hidden="true"></span></p>
+          <p class="hero-sub">Athlete, engineer and gamer from Cape Town. Building products and websites, and making content.</p>
+          <div class="hero-links">
+            <a href="#work" class="bracket"><span>[</span> view my work <span>]</span></a>
+            <a href="#contact" class="bracket"><span>[</span> get in touch <span>]</span></a>
           </div>
-          <div class="hero-terminal">
-            <div class="terminal">
-              <div class="terminal-bar">
-                <span class="t-dot t-red"></span>
-                <span class="t-dot t-yellow"></span>
-                <span class="t-dot t-green"></span>
-                <span class="t-title">jacq@jvjacq: ~</span>
-              </div>
-              <div class="terminal-body">
-                <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> cat about.txt</p>
-                <p class="t-out">Athlete | Engineer | Gamer</p>
-                <p class="t-out">Cape Town, South Africa</p>
-                <p class="t-out">BSc Computer Science &amp; Computer Engineering - UCT</p>
-                <br>
-                <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> cat motivation.txt</p>
-                <p class="t-out">lift heavy.</p>
-                <p class="t-out">run far.</p>
-                <p class="t-out">break limits.</p>
-                <br>
-                <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> ls building/</p>
-                <p class="t-out t-dir">astraeus</p>
-                <p class="t-out t-dir">weblio</p>
-                <p class="t-out t-dir">gnome_extensions</p>
-                <br>
-                <p><span class="t-prompt">jacq@jvjacq</span><span class="t-sep">:</span><span class="t-path">~</span><span class="t-dollar">$</span> <span class="t-cursor"></span></p>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="hero-stage">
+          <p class="status"><b>status:</b> running<br><b>location:</b> cape town</p>
+          <pre id="runner" aria-hidden="true"></pre>
         </div>
       </div>
     </section>
@@ -94,55 +79,43 @@
     <!-- About -->
     <section id="about" class="section section-alt">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="page-eyebrow">About</span>
-            <h2>A few things about me.</h2>
-          </div>
-        </div>
+        <header class="section-head">
+          <span class="kicker">01 / about</span>
+          <h2>A few things about me.</h2>
+        </header>
 
         <div class="about-layout">
 
-          <!-- Sidebar: photo + links -->
-          <div class="about-sidebar">
-            <img src="./assets/images/Jacq.jpg" alt="Jacq van Jaarsveld">
+          <aside class="about-sidebar">
+            <img src="./assets/images/Jacq.jpg" alt="Jacq van Jaarsveld" loading="lazy">
             <div class="sidebar-links">
-              <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="sidebar-link">
-                <i class="ri-github-fill"></i> GitHub
-              </a>
-              <a href="https://www.linkedin.com/in/jvjacq/" target="_blank" rel="noopener" class="sidebar-link">
-                <i class="ri-linkedin-fill"></i> LinkedIn
-              </a>
-              <a href="mailto:jacqvanjaarsveld@gmail.com" class="sidebar-link">
-                <i class="ri-mail-fill"></i> jacqvanjaarsveld@gmail.com
-              </a>
+              <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="row-link"><i class="ri-github-fill" aria-hidden="true"></i> github <span class="arrow">-&gt;</span></a>
+              <a href="https://www.linkedin.com/in/jvjacq/" target="_blank" rel="noopener" class="row-link"><i class="ri-linkedin-fill" aria-hidden="true"></i> linkedin <span class="arrow">-&gt;</span></a>
+              <a href="mailto:jacqvanjaarsveld@gmail.com" class="row-link"><i class="ri-mail-fill" aria-hidden="true"></i> email <span class="arrow">-&gt;</span></a>
             </div>
-          </div>
+          </aside>
 
-          <!-- Content -->
           <div class="about-content">
 
             <div class="about-block">
-              <h2>Who I am</h2>
+              <h3>Who I am<span>.</span></h3>
               <p>I'm Jacq van Jaarsveld, a Computer Scientist with a passion for solving complex problems and crafting meaningful solutions. Organised and meticulous by nature, I thrive in environments that encourage continuous learning and improvement.</p>
               <p>Born and raised in Cape Town, South Africa. During my free time I'm either working out, gaming, reading, watching anime, or hanging out with friends.</p>
             </div>
 
             <div class="about-block">
-              <h2>What I do</h2>
+              <h3>What I do<span>.</span></h3>
               <p>After earning my BSc in Computer Science and Computer Engineering from UCT, I started out as a Software Engineer building bespoke payment solutions in Java, Python, and SQL. I then explored data science, data engineering, and machine learning with Python, SQL, and Docker. Now I'm back in the payments industry as a software engineer in fintech, working across Linux, Docker, and the rest of the modern development stack.</p>
-              <p>Outside of my day job I've been getting deep into Linux and open source, building <strong>Astraeus</strong>, an all-in-one productivity app, working on <strong>Weblio</strong>, my web design studio, and publishing a family of <strong>GNOME Shell extensions</strong>. The more I build, the more the terminal feels like home. Maybe one day I'll use Arch (btw).</p>
+              <p>Outside of my day job I've been getting deep into Linux and open source, working on <strong>Weblio</strong>, my web design studio, building <strong>Astraeus</strong>, an all-in-one productivity app, and publishing a family of <strong>GNOME Shell extensions</strong>. The more I build, the more the terminal feels like home. Maybe one day I'll use Arch (btw).</p>
             </div>
 
             <div class="about-block">
-              <h2>A few things I can do</h2>
+              <h3>A few things I can do<span>.</span></h3>
               <p>Solve a Rubik's cube in under 20 seconds. Hold my breath for three minutes. Recite fifty digits of pi. Throw coffee capsules into the coffee machine. Type relatively fast. Edit photos and videos. Code in quite a few languages.</p>
             </div>
 
-            <hr class="divider">
-
             <div class="about-block">
-              <span class="skills-label">Development</span>
+              <span class="skills-label">development</span>
               <div class="chips">
                 <span class="chip">Java</span>
                 <span class="chip">Python</span>
@@ -157,7 +130,7 @@
             </div>
 
             <div class="about-block">
-              <span class="skills-label">Education</span>
+              <span class="skills-label">education</span>
               <div class="chips">
                 <span class="chip">BSc Computer Science and Computer Engineering - UCT</span>
                 <span class="chip">Data Structures &amp; Algorithms</span>
@@ -175,202 +148,123 @@
     <!-- Work -->
     <section id="work" class="section">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="page-eyebrow">Work</span>
-            <h2>Things I'm building + creating.</h2>
-          </div>
-        </div>
+        <header class="section-head">
+          <span class="kicker">02 / work</span>
+          <h2>Things I'm building + creating.</h2>
+        </header>
 
-        <div class="portfolio-grid">
+        <div class="work-grid">
 
-          <a href="https://astraeus.app" target="_blank" rel="noopener" class="portfolio-card">
-            <div class="portfolio-img g3">
-              <img class="portfolio-thumb" src="./assets/images/astraeus.png" alt="Astraeus home screen">
-            </div>
-            <div class="portfolio-body">
-              <div class="portfolio-meta">
-                <div class="p-tags">
-                  <span class="tag">Cross-platform App</span>
-                  <span class="tag">Product Design</span>
-                </div>
-                <span class="p-year">2026</span>
-              </div>
-              <h3>Astraeus</h3>
-              <p>An all-in-one productivity app, allowing you to manage your tasks, calendar, notes, and habits - all in one place. Built around a local-first Markdown vault you fully own, with optional device sync.</p>
-              <span class="portfolio-link">Visit astraeus.app <i class="ri-arrow-right-line"></i></span>
-            </div>
-          </a>
-
-          <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="portfolio-card">
-            <div class="portfolio-img g2">
-              <img class="portfolio-thumb" src="./assets/images/gnome-extensions.png" alt="Fedora desktop with GNOME extensions">
-            </div>
-            <div class="portfolio-body">
-              <div class="portfolio-meta">
-                <div class="p-tags">
-                  <span class="tag">GNOME Shell</span>
-                  <span class="tag">JavaScript</span>
-                </div>
-                <span class="p-year">2026</span>
-              </div>
-              <h3>GNOME Shell Extensions</h3>
-              <p>A family of lightweight extensions for the GNOME desktop - hot corners, panel-click shortcuts, and lock screen tweaks. Open source and published on extensions.gnome.org.</p>
-              <span class="portfolio-link">View on GitHub <i class="ri-arrow-right-line"></i></span>
-            </div>
-          </a>
-
-          <a href="https://weblio.studio" target="_blank" rel="noopener" class="portfolio-card">
-            <div class="portfolio-img g4">
-              <img class="portfolio-thumb" src="./assets/images/weblio.png" alt="Weblio">
-            </div>
-            <div class="portfolio-body">
-              <div class="portfolio-meta">
-                <div class="p-tags">
-                  <span class="tag">Agency</span>
-                  <span class="tag">Web Design</span>
-                </div>
-                <span class="p-year">2026</span>
-              </div>
+          <a href="https://weblio.studio" target="_blank" rel="noopener" class="work-card">
+            <div class="work-shot"><img src="./assets/images/weblio.png" alt="Weblio" loading="lazy"></div>
+            <div class="work-body">
+              <div class="work-meta"><span class="tag">agency</span><span class="tag">web design</span><span class="year">2026</span></div>
               <h3>Weblio</h3>
               <p>My web design studio - helping businesses and professionals build modern, beautiful websites that they can be proud to share.</p>
-              <span class="portfolio-link">Visit weblio.studio <i class="ri-arrow-right-line"></i></span>
+              <span class="go">visit weblio.studio <span>-&gt;</span></span>
+            </div>
+          </a>
+
+          <a href="https://astraeus.app" target="_blank" rel="noopener" class="work-card">
+            <div class="work-shot"><img src="./assets/images/astraeus.png" alt="Astraeus home screen" loading="lazy"></div>
+            <div class="work-body">
+              <div class="work-meta"><span class="tag">cross-platform app</span><span class="tag">product design</span><span class="year">2026</span></div>
+              <h3>Astraeus</h3>
+              <p>An all-in-one productivity app, allowing you to manage your tasks, calendar, notes, and habits - all in one place. Built around a local-first Markdown vault you fully own, with optional device sync.</p>
+              <span class="go">visit astraeus.app <span>-&gt;</span></span>
+            </div>
+          </a>
+
+          <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="work-card">
+            <div class="work-shot"><img src="./assets/images/gnome-extensions.png" alt="Fedora desktop with GNOME extensions" loading="lazy"></div>
+            <div class="work-body">
+              <div class="work-meta"><span class="tag">gnome shell</span><span class="tag">javascript</span><span class="year">2026</span></div>
+              <h3>GNOME Shell Extensions</h3>
+              <p>A family of lightweight extensions for the GNOME desktop - hot corners, panel-click shortcuts, and lock screen tweaks. Open source and published on extensions.gnome.org.</p>
+              <span class="go">view on github <span>-&gt;</span></span>
             </div>
           </a>
 
         </div>
 
-        <!-- GNOME extensions detail -->
-        <section class="ext-section">
+        <div class="ext-section">
           <div class="ext-header">
             <div>
-              <span class="page-eyebrow">Open Source</span>
-              <h2>GNOME Shell Extensions</h2>
-              <p class="lead">Mostly small and focused extensions for the GNOME desktop.
-              <br>Built for GNOME 50 and published on extensions.gnome.org.</p>
+              <span class="kicker">open source</span>
+              <h3 class="ext-title">GNOME Shell Extensions</h3>
+              <p class="lead">Mostly small and focused extensions for the GNOME desktop.<br>Built for GNOME 50 and published on extensions.gnome.org.</p>
             </div>
-            <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="portfolio-link">All repos on GitHub <i class="ri-arrow-right-line"></i></a>
+            <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="bracket"><span>[</span> all repos on github <span>]</span></a>
           </div>
 
-          <div class="ext-list">
-            <div class="ext-item">
-              <h4>Mouse Control</h4>
-              <p>Configure hot corners, panel click actions, and workspace scroll all from one extension.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Lockscreen Control</h4>
-              <p>Blur the wallpaper, dim the background, collapse notifications, and show a custom message on the lock screen.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Show Apps Hot Corner</h4>
-              <p>Trigger the app grid by moving your cursor into a hot corner.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Show Activities Overview Hot Corner</h4>
-              <p>Toggle the activities overview from a hot corner of your choice.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Show Desktop Hot Corner</h4>
-              <p>Minimise everything and reveal the desktop from a hot corner.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Show System Menu Hot Corner</h4>
-              <p>Open the quick settings / system menu from a hot corner.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Minimize on Panel Click</h4>
-              <p>Left-click empty panel or dock space to minimise the active window.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Close on Panel Click</h4>
-              <p>Right-click empty panel or dock space to close the active window.</p>
-            </div>
-            <div class="ext-item">
-              <h4>Lock Screen Notifications Collapse</h4>
-              <p>Keep the media player collapsed on the lock screen for a cleaner view.</p>
-            </div>
-          </div>
-        </section>
-
+          <ul class="ext-list">
+            <li><h4>Mouse Control</h4><p>Configure hot corners, panel click actions, and workspace scroll all from one extension.</p></li>
+            <li><h4>Lockscreen Control</h4><p>Blur the wallpaper, dim the background, collapse notifications, and show a custom message on the lock screen.</p></li>
+            <li><h4>Show Apps Hot Corner</h4><p>Trigger the app grid by moving your cursor into a hot corner.</p></li>
+            <li><h4>Show Activities Overview Hot Corner</h4><p>Toggle the activities overview from a hot corner of your choice.</p></li>
+            <li><h4>Show Desktop Hot Corner</h4><p>Minimise everything and reveal the desktop from a hot corner.</p></li>
+            <li><h4>Show System Menu Hot Corner</h4><p>Open the quick settings / system menu from a hot corner.</p></li>
+            <li><h4>Minimize on Panel Click</h4><p>Left-click empty panel or dock space to minimise the active window.</p></li>
+            <li><h4>Close on Panel Click</h4><p>Right-click empty panel or dock space to close the active window.</p></li>
+            <li><h4>Lock Screen Notifications Collapse</h4><p>Keep the media player collapsed on the lock screen for a cleaner view.</p></li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section section-alt">
       <div class="container">
-        <div class="section-header">
-          <div>
-            <span class="page-eyebrow">Contact</span>
-            <h2>Let's talk.</h2>
-          </div>
-        </div>
+        <header class="section-head">
+          <span class="kicker">03 / contact</span>
+          <h2>Let's talk.</h2>
+        </header>
 
         <div class="contact-layout">
 
-          <!-- Left: links -->
           <div class="contact-left">
-            <h2>Find me online</h2>
-            <p>The best way to reach me is via email. You can also find me across most platforms below.</p>
-
+            <p class="contact-intro">The best way to reach me is via email. You can also find me across most platforms below.</p>
             <div class="contact-links">
-              <a href="https://www.instagram.com/jvjacq/" target="_blank" rel="noopener" class="contact-item">
-                <i class="ri-instagram-fill"></i>
-                <span>@jvjacq</span>
-              </a>
-              <a href="https://www.youtube.com/c/jvjacq" target="_blank" rel="noopener" class="contact-item">
-                <i class="ri-youtube-fill"></i>
-                <span>@jvjacq</span>
-              </a>
-              <a href="https://www.tiktok.com/@jvjacq" target="_blank" rel="noopener" class="contact-item">
-                <i class="ri-tiktok-fill"></i>
-                <span>@jvjacq</span>
-              </a>
-              <a href="https://www.twitch.tv/jvjacq" target="_blank" rel="noopener" class="contact-item">
-                <i class="ri-twitch-fill"></i>
-                <span>jvjacq</span>
-              </a>
-              <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="contact-item">
-                <i class="ri-github-fill"></i>
-                <span>jvjacq</span>
-              </a>
-              <a href="https://www.linkedin.com/in/jvjacq/" target="_blank" rel="noopener" class="contact-item">
-                <i class="ri-linkedin-fill"></i>
-                <span>jvjacq</span>
-              </a>
-              <a href="mailto:jacqvanjaarsveld@gmail.com" class="contact-item">
-                <i class="ri-mail-fill"></i>
-                <span>jacqvanjaarsveld@gmail.com</span>
-              </a>
+              <a href="mailto:jacqvanjaarsveld@gmail.com" class="row-link"><i class="ri-mail-fill" aria-hidden="true"></i> jacqvanjaarsveld@gmail.com <span class="arrow">-&gt;</span></a>
+              <a href="https://www.instagram.com/jvjacq/" target="_blank" rel="noopener" class="row-link"><i class="ri-instagram-fill" aria-hidden="true"></i> instagram <span class="handle">@jvjacq</span> <span class="arrow">-&gt;</span></a>
+              <a href="https://www.youtube.com/c/jvjacq" target="_blank" rel="noopener" class="row-link"><i class="ri-youtube-fill" aria-hidden="true"></i> youtube <span class="handle">@jvjacq</span> <span class="arrow">-&gt;</span></a>
+              <a href="https://www.tiktok.com/@jvjacq" target="_blank" rel="noopener" class="row-link"><i class="ri-tiktok-fill" aria-hidden="true"></i> tiktok <span class="handle">@jvjacq</span> <span class="arrow">-&gt;</span></a>
+              <a href="https://github.com/jvjacq" target="_blank" rel="noopener" class="row-link"><i class="ri-github-fill" aria-hidden="true"></i> github <span class="handle">jvjacq</span> <span class="arrow">-&gt;</span></a>
+              <a href="https://www.linkedin.com/in/jvjacq/" target="_blank" rel="noopener" class="row-link"><i class="ri-linkedin-fill" aria-hidden="true"></i> linkedin <span class="handle">jvjacq</span> <span class="arrow">-&gt;</span></a>
             </div>
           </div>
 
-          <!-- Right: message form -->
           <div class="contact-right">
-            <h2>Send a message</h2>
-            <form class="contact-form" action="mailto:jacqvanjaarsveld@gmail.com" method="GET">
+            <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <p class="form-title"><span>$</span> send-message</p>
+              <input type="hidden" name="form-name" value="contact">
+              <p class="form-honeypot" aria-hidden="true"><label>Leave this empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
               <div class="form-row">
                 <div class="form-group">
-                  <label for="name">Name</label>
+                  <label for="name">name</label>
                   <input type="text" id="name" name="name" placeholder="Your name" required>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email</label>
+                  <label for="email">email</label>
                   <input type="email" id="email" name="email" placeholder="you@example.com" required>
                 </div>
               </div>
               <div class="form-group">
-                <label for="subject">Subject</label>
+                <label for="subject">subject</label>
                 <input type="text" id="subject" name="subject" placeholder="What it's about">
               </div>
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="body" placeholder="Your message here..."></textarea>
+                <label for="message">message</label>
+                <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
               </div>
-              <div>
-                <button type="submit" class="btn btn-primary">Send message <i class="ri-send-plane-fill"></i></button>
-              </div>
-              <p class="form-note">This opens your email client. You can also write directly to <a href="mailto:jacqvanjaarsveld@gmail.com" style="text-decoration:underline">jacqvanjaarsveld@gmail.com</a>.</p>
+              <div><button type="submit" class="solid-btn">send message <span>-&gt;</span></button></div>
+              <p id="form-error" class="form-error" role="alert" hidden>That didn't send. Please try again, or email <a href="mailto:jacqvanjaarsveld@gmail.com">jacqvanjaarsveld@gmail.com</a>.</p>
+              <p class="form-note">Prefer email? Write to <a href="mailto:jacqvanjaarsveld@gmail.com">jacqvanjaarsveld@gmail.com</a>.</p>
             </form>
+            <div id="form-success" class="form-success" role="status" tabindex="-1" hidden>
+              <p class="form-title"><span>$</span> message sent<span class="ok"> [ok]</span></p>
+              <p>Thanks, I'll get back to you soon.</p>
+            </div>
           </div>
 
         </div>
@@ -380,19 +274,18 @@
   </main>
 
   <footer>
-    <div class="container">
-      <div class="footer-inner">
-        <a href="#top" class="logo">jvjacq</a>
-        <nav class="footer-nav">
-          <a href="#about"   class="footer-link">About</a>
-          <a href="#work"    class="footer-link">Work</a>
-          <a href="#contact" class="footer-link">Contact</a>
-        </nav>
-        <span class="copyright">© 2026 Jacq van Jaarsveld</span>
-      </div>
+    <div class="container footer-inner">
+      <a href="#top" class="logo">jvjacq</a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">about</a>
+        <a href="#work">work</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <span class="copyright">&copy; <span id="year">2026</span> Jacq van Jaarsveld</span>
     </div>
   </footer>
 
+  <script src="./assets/js/runner.js"></script>
   <script src="./assets/js/main.js"></script>
 </body>
 </html>
